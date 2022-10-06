@@ -1,17 +1,21 @@
-
 class Solution:
    def solution(self, money):
       title = " ### 화폐교환 ###"
       aster = "*"*30
       answer = f"요청금액 : {money} 원"
-      answer2 = int(money / 50000)
-      answer3 = int((money % 50000) / 10000)
-      answer4 = int((money % 10000) /5000 )
-      answer5 = int((money % 5000)  / 1000)
-      answer6 = int((money % 1000)  / 500)
-      answer7 = int((money % 500)  / 100)
-      answer8 = int((money % 100)  / 50)
-      answer9 = int((money % 50)  / 10)
+      
+      unit = [50000, 10000, 5000, 1000, 500, 100, 50, 10]
+      for i in unit:
+         print(i)
+         
+      answer2 = int(money / unit[0])
+      answer3 = int((money % unit[0]) / unit[1])
+      answer4 = int((money % unit[1]) / unit[2])
+      answer5 = int((money % unit[2])  / unit[3])
+      answer6 = int((money % unit[3])  / unit[4])
+      answer7 = int((money % unit[4])  / unit[5])
+      answer8 = int((money % unit[5])  / unit[6])
+      answer9 = int((money % unit[6])  / unit[7])
       
       
       return (
@@ -31,3 +35,6 @@ if __name__=="__main__":
    money = int(input("화폐교환할 금액입력: "))
    print(solution.solution(money))
 
+ #round curl square ankle brcae (){}[] <>
+ # quote ' " 
+ 
