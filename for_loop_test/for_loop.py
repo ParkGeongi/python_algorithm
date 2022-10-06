@@ -1,0 +1,13 @@
+
+def solution():
+    money = 1660
+    count = 0
+    unit=[500,100,50,10] 
+    
+    for i in unit:
+        count = money // i
+        money = money % i
+        print(f'{i}원짜리 {count}개')  
+
+if __name__ == "__main__":
+    solution()
