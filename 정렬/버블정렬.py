@@ -18,7 +18,10 @@ class Solution:
             print(f' {k} : {v} ')
         
         print('*'*30)
-        
+    def show(dc):
+        for k,v in dc.items():
+            print(f"{k}: {v}")
+            print('*'*30)
 if __name__ == "__main__":
 
     solution = Solution()
