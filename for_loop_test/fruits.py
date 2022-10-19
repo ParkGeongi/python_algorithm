@@ -11,22 +11,26 @@
 """
 
 class Fruits(object):
-
-    def __init__(self) -> None:
-        self.menu = ["바나나", "사과", "망고"]
+    def __init__(self) -> None: # __init__ 생성자임
+        self.menu = ["바나나","사과", "망고"]
         pass
-    def print_fruits(self):
-        print("과일번호표")
+    
+    def print_menu(self):
+        print("### 과일 ###")
         print("*"*30)
-        unit = ["사과","바나나","망고"]
         a=1
         for i in self.menu:
-            print(f"{a}번과일: {i}")
+            print(f"{a} 번 과일 : {i}")
             a+=1
         print("*"*30)
 
-    @staticmethod
+    @staticmethod ##외부에 노출되는것이 스테틱
+
     def main():
-        fruits = Fruits() #인스턴스를 만들어라
-        fruits.print_fruits()
-Fruits.main()       
+
+        fruits = Fruits() #인스턴스 = 생성자
+        fruits.print_menu()
+
+Fruits.main()
+
+

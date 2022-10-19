@@ -8,7 +8,8 @@
 이름: 홍길동
 나이: 25 (만)
 성별: 남성
-주소: 서울******************
+주소: 서울
+********************************
 """
 
 class Intro(object):
@@ -18,6 +19,7 @@ class Intro(object):
         self.home = home
         self.age = 0
         self.gender = ""
+    
     def set_age(self):
         id = self.id
 
@@ -31,7 +33,6 @@ class Intro(object):
             self.age = 2022 - 2000 - int(id[0:2])
          
 
-
     def set_gender(self):
         id = self.id
         if id[7] == "1":
@@ -42,6 +43,7 @@ class Intro(object):
             self.gender = "여"
         elif id[7] == "4":
             self.gender ="여"    
+
 
     def print_intro(self):
 
@@ -68,3 +70,4 @@ class Intro(object):
 
 
 Intro.main()
+
