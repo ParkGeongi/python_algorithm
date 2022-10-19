@@ -9,7 +9,9 @@
 나이: 25 (만)
 성별: 남성
 주소: 서울
-********************************
+
+검색할 첫글자 입력하면 나오게
+*******************************
 """
 
 class Intro(object):
@@ -59,7 +61,7 @@ class Intro(object):
 
     @staticmethod
     def main():
-
+    
         name = input("이름 : ")
         id = input("주민번호 : ")
         home = input("주소 : ")
@@ -67,7 +69,6 @@ class Intro(object):
         intro2.set_age()
         intro2.set_gender()
         intro2.print_intro()
-
 
 Intro.main()
 
