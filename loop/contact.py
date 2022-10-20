@@ -30,7 +30,7 @@ class Contact(object):
     def print_info(self):
         print(f"{self.name} {self.phone_num} {self.email} {self.addres}")
        
-
+    @staticmethod
     def get_contacts(ls):
         for i in ls:
             i.print_info()
