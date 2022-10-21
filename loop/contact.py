@@ -34,16 +34,15 @@ class Contact(object):
     def get_contacts(ls):
         for i in ls:
             i.print_info()
-            
 
     @staticmethod
     def new_contact():
-        name = input("이름을 입력하세요: ")
+        name = input("이름을 입력하세요dd: ")
         phone_num = input("전화번호을 입력하세요: ")
         email = input("이메일을 입력하세요: ")
         addres = input("주소을 입력하세요: ")        
         return Contact(name, phone_num, email, addres)
-        
+
     @staticmethod #화면을 처리하는것은 static
     def print_menu():
         print("1. 연락처 등록")
@@ -52,8 +51,7 @@ class Contact(object):
         print("4. 종료")
         menu = int(input("메뉴 선택: "))
         return menu
- 
-      
+
     @staticmethod
     def main():
         ls = []
@@ -72,7 +70,5 @@ class Contact(object):
             elif menu == 4:
                 print(" ### 어플 종료 ###")
                 break
-
-
 
 Contact.main()
