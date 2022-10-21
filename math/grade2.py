@@ -1,8 +1,4 @@
 
-from colorsys import rgb_to_yiq
-from lib2to3.pytree import type_repr
-
-
 class Grade(object):
     def __init__(self, name, ko, en, ma) -> None:
         self.name = name
@@ -33,13 +29,14 @@ class Grade(object):
         else : grade = "F"
         self.grade = grade
         return grade
-    
+
+    def delete(self):
+        pass
+
     def print_info(self):
         print("이름 국어 영어 수학 총점 평균 등급")
         print(f"{self.name} {self.ko} {self.en} {self.ma} {self.get_total()} {round(self.get_avg(),2)} {self.get_grade()}")
-    
-    def delete(self, a, ls):
-        pass
+
     
     @staticmethod
     def get_grades(ls):
@@ -48,11 +45,7 @@ class Grade(object):
 
     @staticmethod
     def new_grade():
-        name = input("이름 : ")
-        ko = int(input("국어 : "))
-        en = int(input("영어 : "))
-        ma = int(input("수학 : "))
-        return Grade(name,ko,en,ma)
+        return Grade(input("이름 : "),int(input("국어 : ")),int(input("영어 : ")),int(input("수학 : ")))
 
     @staticmethod
     def print_menu():
@@ -79,11 +72,10 @@ class Grade(object):
                 Grade.get_grades(ls)
             elif menu == 3:
                 print("### 삭제 ###") 
-                a=input("뭐 지울래")
-                ls = grade.delete(a, ls)
-                
+
             elif menu == 4:
                 print("### 종료 ###")
                 break
+
 Grade.main()
 
