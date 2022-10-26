@@ -11,15 +11,12 @@ class Contact(object):
         self.phone_num = phone_num
         self.email = email
         self.addres = addres
-
+    @staticmethod
     def delete_contact(self, ls, name):
-
         del ls[[i for i, j in enumerate(ls) if j.name == name][0]]
 
 
 
-
-#요소가 1개밖에 없다
 
     def print(self):
         name = self.name
@@ -35,6 +32,7 @@ class Contact(object):
     @staticmethod
     def get_contacts(ls):
        [_.print_info() for _ in ls]
+
 
 
     @staticmethod
@@ -69,8 +67,6 @@ class Contact(object):
             elif menu == 3:
                 print(" ### 연락처 삭제 ###")
                 contact.delete_contact(ls, input(" 삭제할 사람 이름 :"))
-
-
 
             elif menu == 4:
                 print(" ### 어플 종료 ###")
